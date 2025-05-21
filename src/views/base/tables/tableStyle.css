@@ -1,0 +1,72 @@
+/* Container untuk tabel */
+.table-container {
+  padding: 10px;
+}
+
+/* Tema dark untuk tabel */
+.custom-table.dark-mode {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e; /* Abu-abu gelap */
+  color: #f1f1f1; /* Warna teks terang */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #333; /* Border agar terlihat lebih tajam */
+}
+
+/* Header tabel */
+.custom-table.dark-mode th {
+  background-color: #333; /* Warna header lebih gelap */
+  color: #ffffff; /* Warna teks putih */
+  padding: 12px;
+  text-align: left;
+}
+
+/* Data di dalam tabel */
+.custom-table.dark-mode td {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+/* Warna selang-seling untuk tabel */
+.custom-table.dark-mode tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.custom-table.dark-mode tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+/* Efek hover */
+.custom-table.dark-mode tr:hover {
+  background-color: #444;
+  transition: 0.3s;
+}
+
+/* Styling spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,74 @@
+.tank-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.tank {
+  width: 350px;
+  height: 280px;
+  border: 8px solid #333;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, #28a745, #4caf50);
+  transition: height 0.5s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Efek Gelombang */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  top: -10px;
+  left: -50%;
+  border-radius: 50%;
+  animation: wave-animation 10s linear infinite;
+}
+
+.wave2 {
+  top: -5px;
+  opacity: 0.6;
+  animation: wave-animation 10s linear infinite reverse;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Monitoring Sensor Gas */
+.gas-monitor {
+  text-align: center;
+  padding: 20px;
+}
+
+.gauge-container {
+  width: 180px;
+  margin: 0 auto;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
