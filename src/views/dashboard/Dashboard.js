@@ -118,7 +118,7 @@ const Dashboard = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       fetchData()
-    }, 4000)
+    }, 8000)
 
     return () => clearTimeout(timeoutId)
   }, [])

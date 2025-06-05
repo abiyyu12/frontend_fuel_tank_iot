@@ -41,7 +41,7 @@ const FilterFuelConsumption = () => {
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)
-    return new Intl.DateTimeFormat('id-ID', {
+    return new Intl.DateTimeFormat('en-US', {
       weekday: 'long',
       day: '2-digit',
       month: 'long',
@@ -92,7 +92,7 @@ const FilterFuelConsumption = () => {
       setLastWeekData(formattedData)
     } catch (error) {
       if (error.response && error.response.status === 404) {
-        setErrorMessage('Data tidak ditemukan. Coba gunakan rentang tanggal lain.')
+        setErrorMessage('Data not found. Please try using a different date range.')
       } else if (error.response && error.response.status === 401) {
         Swal.fire({
           icon: 'error',
@@ -104,7 +104,7 @@ const FilterFuelConsumption = () => {
           navigate('/login') // Arahkan ke halaman login
         })
       } else {
-        setErrorMessage('Terjadi kesalahan saat mengambil data.')
+        setErrorMessage('Something Wrong')
       }
       setLastWeekData([])
     } finally {
