@@ -1,6 +1,6 @@
 import { element } from 'prop-types'
 import React from 'react'
-import MainFuelMonitorinig from './views/fuel_monitoring/mainFuelMonitorinig'
+import MainFuelMonitorinig from './views/fuel_monitoring/MainFuelMonitorinig'
 import Profile from './views/profile/Profile'
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 
